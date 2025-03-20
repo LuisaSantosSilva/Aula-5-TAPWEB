@@ -7,7 +7,7 @@ const post = require('./models/post')
 app.engine("handlebars", handlebars({defaultLayout: "main"}))
 app.set("view engine", "handlebars")
 
-app.use(bosyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json)
 
 app.get('/', function(req,res){
